@@ -1,0 +1,4 @@
+Create table PIN (
+Pincode VARCHAR(10) PRIMARY KEY,
+State VARCHAR(20)
+);

@@ -1,0 +1,8 @@
+Create Table Orders(
+Order_id int PRIMARY KEY,
+Cart_id INT,
+OrderDate date,
+TotalPrice int,
+Status varchar(50),
+FOREIGN KEY (Cart_id) REFERENCES Cart(Cart_id)
+);

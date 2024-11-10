@@ -1,0 +1,8 @@
+
+CREATE TABLE Product (
+Product_id INT PRIMARY KEY,
+Category_id INT,
+Product_Name VARCHAR(20),
+FOREIGN KEY (Category_id) REFERENCES
+Category(Category_id)
+);

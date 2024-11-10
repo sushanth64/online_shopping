@@ -1,0 +1,5 @@
+CREATE TABLE Price (
+Product_Name VARCHAR(20) PRIMARY KEY,
+Price INT,
+Description VARCHAR(255)
+);

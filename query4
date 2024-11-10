@@ -1,0 +1,4 @@
+Create Table Category (
+Category_id INT PRIMARY KEY,
+Category_Name VARCHAR(20)
+);

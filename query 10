@@ -1,0 +1,8 @@
+CREATE TABLE Payment (
+Payment_id INT PRIMARY KEY,
+Order_id INT,
+Amount INT,
+PaymentDate DATE,
+PaymentMethod Varchar(30),
+FOREIGN KEY (Order_id) REFERENCES Orders(Order_id)
+);

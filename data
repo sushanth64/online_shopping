@@ -1,0 +1,162 @@
+--Inserting data into tables :-
+--1)User
+insert into User values
+('happy_1','lalith','takare','9673682921','lalith_123@gmail.com','takare*2','29384');
+insert into User values
+('m3g4n','meghana','pasikanti','6322232541','meghanapasikanti@gmail.com','m_pasi*2','10283');
+insert into User values
+('asam_123','asam','samba','3256974105','asamsamba@gmail.com''test1','93749');
+insert into User values('suji_rider''sujit','das','3689741025','sujitdas@gmai.com','passw_ord','92748');
+insert into User values
+('hema_123''hema','landa','6598126523','hemalanda@gmail.com','hema*123','92472');
+insert into User values
+('sruth_56','sruthi','pulusu','6548236545','sruthipulusu@gmail.com','zinch','65463');
+
+--2)PIN
+Insert into PIN
+Values (29384,
+'Telangana');
+Insert into PIN
+Values (10283,
+'Tokyo');
+Insert into PIN
+Values (93749,
+'Beijing');
+Insert into PIN
+Values (92748,
+'Tripura');
+Insert into PIN
+Values (92472,
+'Hassen');
+Insert into PIN
+Values (65463,
+'Washington');
+--3)State
+Insert into STATE
+Values ('Telangana', 'India');
+Insert into STATE
+Values ('Tokyo', 'Japan');
+Insert into STATE
+Values ('Beijing', 'China');
+Insert into STATE
+Values ('Tripura', 'India');
+Insert into STATE
+Values ('Hassen', 'Germany');
+Insert into STATE
+Values ('Washington', 'America');
+--4)Category
+INSERT INTO Category (Category_id,
+Category_Name) VALUES
+(1, 'Electronics'),
+(2, 'Clothing'),
+(3, 'Books'),
+(4, 'Home and Kitchen'),
+(5, 'Sports and Outdoors'),
+(6, 'Beauty and Personal Care');
+--5) Product
+insert into Product (Product_id,
+Category_id,Product_Name) values
+(1,1,'Laptop'),
+(2,3,'Hydraulic Structures'),
+(3,6,'Sunscreen'),
+(4,5,'Shuttlecock'),
+(5,4,'Cookware Set'),
+(6,5,'Running Shoes'),
+(7, 1, 'Smartphone'),
+(8, 2, 'T-shirt'),
+(9, 3, 'Novel'),
+(10, 4, 'Coffee Maker'),
+(11, 5, 'Yoga Mat'),
+(12, 6, 'Perfume');
+--6)Price
+INSERT INTO Price (Product_Name, Price,
+Description) VALUES
+('laptop', 57000, 'Dell 15 Laptop, 13th Gen Intel Core
+i5-1335U Processor/ 8GB/ 512GB SSD/15.6"
+(39.62cm) FHD AG 120Hz 250 nits Narrow Border/
+Win11 + MSO21/15 Month McAfee/Carbon
+Black/Thin & Light- 1.66kg'),
+('hydraulic structures', 3000, 'This book discusses
+in detail the planning, design, construction and
+management of hydraulic structures, covering
+dams, spillways, tunnels'),
+('sunscreen', 600, 'Sunscreen SPF 50 PA+++ |
+UVA/B & Blue Light Protection for Men & Women |
+Oily, Dry, Sensitive & Combination Skin |
+Fragrance-Free | 50g'),
+('shuttle', 100, 'Badminton Nylon Shuttlecock with
+Heavy Cork with Excellent Flite, Kids Beginner
+Practice Shuttlecocks'),
+('cookware set', 1599, 'Pro Cook Kitchen Jewel Set
+of 5 (Fry pan 24 cm/1.6 Litres; Kadhai 24 cm/2.5
+Litres with glass lid; Tawa 25 cm; Nylon Laddle and
+Spatula), Peach | Induction | Dishwasher | Hot Plate
+| Flame Safe'),
+('running shoes', 1300, 'Chrome-02 Sports Running,
+Walking & Gym Shoes with Max Cushion
+Technology with Memory Form Casual Sneaker
+Shoes'),
+('Smartphone',10000,'13C 5G (Starlight Black, 4GB
+RAM, 128GB Storage) | MediaTek Dimensity 6100+
+5G | 90Hz Display'),
+('T-shirt',500,'Pure Cotton Oversized Fit Multicolor
+Official Marvel & Disney Merchandise'),
+('Novel','1000','Immerse yourself in the captivating
+world of this gripping novel. Explore the depths of
+human emotions and follow the thrilling narrative
+that will keep you on the edge of your seat. With
+well-developed characters and an engaging plot,
+this novel promises an unforgettable reading
+experience'),
+('Coffee Maker',1000,'urban platter French Press
+Coffee Maker Pot, 850ml [Toughened Boron Glass,
+Stainless Steel Plunger]'),
+('Yoga Mat',900,'Basics 13mm Extra Thick NBR
+Yoga and Exercise Mat with Carrying Strap, Black'),
+('Perfume',565,'Luxury Unisex Eau De Parfum Gift
+Set 4 x 20ml for Men & Women with SKAI, FRESH,
+WHITEOUD, HONEY OUD Perfume|Long Lasting
+EDP Fragrance Scent');
+--7)Cart
+insert into Cart (Cart_id,User_id) values
+(122,'happy_1'),
+(123,'m3g4n'),
+(132,'asam_123'),
+(212,'suji_rider'),
+(224,'hema_123'),
+(256,'sruth_56'),
+(258,'suji_rider');
+--8)Product_Cart
+insert into Product_Cart (Cart_id,Product_id,Quantity)
+values
+(122,5,2),
+(122,10,1),
+(122,1,1),
+(123,4,6),
+(132,8,2),
+(132,12,3),
+(132,2,1),
+(212,2,1),
+(224,10,1),
+(224,7,1),
+(256,6,1),
+(256,3,4),
+(258,2,1);
+--9)Orders
+INSERT INTO Orders(Order_id,Cart_id,OrderDate,
+TotalPrice,Status) VALUES
+(101, 122, '10-01-2024', 58599, 'Processing'),
+(102, 132, '4-12-2023',5695, 'Shipped'),
+(103, 256, '26-11-2023', 2500, 'Delivered'),
+(104, 123, '8-01-2024', 600, 'Processing'),
+(105, 258, '28-12-2023', 3000, 'Shipped'),
+(106, 224, '23-12-2023', 11000, 'Delivered');
+--10)Payment
+INSERT INTO Payment (Payment_id,Order_id,Amount,
+PaymentDate, PaymentMethod) VALUES
+(2670, 101,5899, '15-01-2024', 'Credit Card'),
+(9860,102,5695, '4-12-2023', 'PayPal'),
+(5670, 103,2500, '30-11-2023', 'Debit Card'),
+(4560, 104,600, '10-01-2024', 'Credit Card'),
+(3450, 105, 3000, '28-12-2023', 'PayPal'),
+(980, 106,11000, '25-12-2023', 'Debit Card');

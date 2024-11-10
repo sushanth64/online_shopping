@@ -1,0 +1,4 @@
+Create Table State (
+State varchar(20) PRIMARY KEY,
+Country varchar(20)
+);

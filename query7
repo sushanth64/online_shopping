@@ -1,0 +1,6 @@
+CREATE TABLE Cart (
+Cart_id INT,
+User_id varchar(10),
+Primary key (Cart_id),
+FOREIGN KEY (user_id) REFERENCES User(User_id)
+);

@@ -1,0 +1,6 @@
+CREATE TABLE Product_Cart (
+Cart_id INT,
+Product_id INT,
+Quantity INT,
+Primary key (Cart_id,Product_id)
+);
